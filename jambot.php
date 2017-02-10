@@ -17,7 +17,7 @@ switch ($message) {
 case "/test":
 sendmessage($chatId,"test");
 break;
-case "/ht":
+case "/hi":
 sendMessage($chatId,"hey there!")
 break;
 default:
