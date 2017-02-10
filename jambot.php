@@ -1,10 +1,12 @@
 <?php 
+
+ini_set('error_reporting',E_ALL);
+
 $bot Token = "373015705:AAFtuEh7VylLWbDZi6_9fLsgxR6bkEAWETs" ;
 &website = "https://api.telegram.org/bot".$botToken;
 
 $update = file_get_contents("php://input");
-
-$updateArray = json_decode($update, TRUE);
+$update = json_decode($update, TRUE);
 
 //rint_r($updateArray);
 
@@ -14,14 +16,14 @@ $message = $update["message"]["text"];
 
 switch ($message) {
 
-case "/test":
-sendmessage($chatId,"test");
-break;
-case "/hi":
-sendMessage($chatId,"hey there!")
-break;
-default:
-sendMessage($chatId,"default");
+     case "/test":
+              sendmessage($chatId,"test");
+              break;
+     case "/hi":
+              sendMessage($chatId,"hey there!")
+              break;
+     default:
+              sendMessage($chatId,"default");
 }
 //file_get_contents($website."/sendmessage?chat_id=".$chatId."&text=test");
 function sendMessage ($chatId, $message){
